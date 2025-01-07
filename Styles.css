@@ -6,9 +6,27 @@ body {
   background-color: #f4f4f4;
 }
 
+/* Font */
+
+.bebas-neue-regular {
+  font-family: 'Bebas Neue', serif;
+  font-weight: 600;
+  font-size: 50px;
+  font-style: normal;
+}
+
+.exo-2 {
+  font-family: 'Exo 2', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+}
+
 /* Navbar */
 
 /* Navbar Container */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -43,7 +61,7 @@ nav {
 /* Hidden Menu for Mobile */
 
 .nav-links {
-  display: none; /* Sembunyikan menu di tampilan kecil */
+  display: none;
   flex-direction: column;
   background-color: #282727;
   position: absolute;
@@ -87,7 +105,7 @@ nav {
 }
 
 .hamburger-menu.open span:nth-child(2) {
-  opacity: 0; /* Hilangkan garis tengah */
+  opacity: 0;
 }
 
 .hamburger-menu.open span:nth-child(3) {
@@ -138,7 +156,7 @@ header h1 {
   align-items: center;
   height: 100vh;
   gap: 50px;
-  background-color: white;
+  background-color: rgba(48, 79, 83, 0.827);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -148,7 +166,11 @@ header h1 {
 }
 
 .section h2 {
-  color: #333;
+  color: #ffffff;
+}
+
+.text-about {
+  color: white;
 }
 
 .content-about {
@@ -218,12 +240,14 @@ header h1 {
 .section {
   padding: 20px;
   margin: 20px 0;
+  height: 100vh;
 }
 
 .education h2 {
   text-align: center;
   font-size: 2em;
   margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .education-content {
@@ -231,6 +255,7 @@ header h1 {
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .education-item {
@@ -434,10 +459,19 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .nav-link {
+    width: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
   header {
     height: auto;
     padding: 20px;
     text-align: center;
+    height: 100vh;
   }
 
   .img-header img {
@@ -446,13 +480,25 @@ footer {
     margin-top: 56px;
   }
 
-  .nav-links {
-    width: 100%;
+  .content-about {
+    flex-direction: column;
+    width: 90%;
+    padding: 10px;
+    gap: 30px;
   }
 
-  .content-about {
-    padding: 10px;
-    gap: 20px;
+  .img-about img {
+    width: 150px;
+    height: auto;
+  }
+
+  .text-about {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .section h2 {
+    font-size: 20px;
   }
 
   .skills {
